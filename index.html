@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bia Santander 23 | Corte, Barba e Prótese Capilar em Santo André</title>
+  <meta name="description"
+    content="Corte masculino, barba e prótese capilar com atendimento personalizado e horário marcado em Santo André, ABC Paulista.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --preto: #10100E;
+      --ouro: #F2C94C;
+      --ouro-2: #E3B83F;
+      --ouro-icone: #DDB062;
+      --creme: #F4F1E8;
+      --creme-90: rgba(244, 241, 232, .9);
+      --creme-60: rgba(244, 241, 232, .6);
+      --grad-ouro: linear-gradient(135deg, #E3B83F 0%, #F2C94C 100%);
+      --grad-preto: linear-gradient(to bottom right, #12100E 0%, #10120E 100%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: clamp(14px, 1.09vw, 44px)
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--preto);
+      color: var(--creme-90);
+      line-height: 1.7;
+      overflow-x: hidden
+    }
+
+    img {
+      display: block;
+      max-width: 100%
+    }
+
+    .servicos,
+    .bia,
+    .protese,
+    .local,
+    .cta,
+    footer {
+      background: var(--grad-preto)
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--creme);
+      line-height: 1.2
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase
+    }
+
+    .ouro {
+      color: var(--ouro)
+    }
+
+    .wrap {
+      width: 92vw;
+      margin-inline: auto
+    }
+
+    .hero .wrap,
+    .servicos .wrap {
+      width: 84vw
+    }
+
+    .galeria .wrap {
+      width: 88vw
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--ouro);
+      outline-offset: 3px
+    }
+
+    /* placeholder de imagem: troque apenas o src */
+    .ph {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: #2a2a25;
+      color: #888
+    }
+
+    /* botões */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .9rem;
+      padding: .7rem 3rem;
+      border-radius: .5rem;
+      font-weight: 500;
+      font-size: 1.2rem;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: var(--preto)
+    }
+
+    .btn-ouro {
+      background: var(--ouro)
+    }
+
+    .btn-claro {
+      background: var(--creme)
+    }
+
+    .btn img {
+      width: 1.8rem;
+      height: 1.8rem;
+      flex: none
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: max(47vw, 36rem);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: url(assets/hero-fundo.svg) center/cover no-repeat, var(--grad-preto)
+    }
+
+    .hero-forma {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 37.7%;
+      height: 100%
+    }
+
+    .hero-txt {
+      position: relative;
+      z-index: 2;
+      padding-block: 5rem
+    }
+
+    .hero h1 {
+      font-size: 2.85rem;
+      font-weight: 700;
+      letter-spacing: .01em
+    }
+
+    .hero h2 {
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 2.6rem;
+      font-weight: 600;
+      margin-top: 3rem;
+      line-height: 1.25
+    }
+
+    .hero p {
+      margin: 1.5rem 0 5rem;
+      color: var(--creme-60)
+    }
+
+    /* SERVIÇOS */
+    .servicos {
+      position: relative;
+      padding: 5rem 0 9rem
+    }
+
+    .folha {
+      position: absolute;
+      right: 0;
+      bottom: -9.5vw;
+      width: 41vw;
+      height: auto;
+      z-index: 1;
+      pointer-events: none
+    }
+
+    .topo-titulo {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap
+    }
+
+    .topo-titulo::after {
+      content: "";
+      flex: 0 1 22rem;
+      height: 2px;
+      background: var(--ouro);
+      margin-top: .6rem
+    }
+
+    .sub {
+      color: var(--creme-60);
+      font-size: 1.05rem
+    }
+
+    .serv-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 3rem;
+      align-items: center
+    }
+
+    .serv-lista {
+      display: grid;
+      gap: 4rem
+    }
+
+    .serv h3 {
+      font-weight: 300;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      margin-top: .4rem
+    }
+
+    .serv p {
+      color: var(--creme-60)
+    }
+
+    .serv .linha {
+      position: relative;
+      height: 2px;
+      background: var(--ouro);
+      width: 26rem;
+      max-width: 100%;
+      margin-top: .9rem
+    }
+
+    .serv .linha i {
+      position: absolute;
+      right: -1px;
+      top: 50%;
+      width: .5rem;
+      height: .5rem;
+      margin-top: -.25rem;
+      border-radius: 50%;
+      background: var(--ouro)
+    }
+
+    .icone {
+      width: 4.2rem;
+      height: 4.2rem
+    }
+
+    .foco .icone {
+      width: 4.8rem;
+      height: 4.8rem
+    }
+
+    .foco {
+      text-align: center;
+      display: grid;
+      justify-items: center;
+      gap: 1.1rem
+    }
+
+    .foco h3 {
+      font-weight: 400;
+      font-size: clamp(1.6rem, 2.6vw, 2.2rem)
+    }
+
+    .foco .linha-c {
+      width: 60%;
+      max-width: 16rem;
+      height: 2px;
+      background: var(--ouro);
+      margin: .8rem 0
+    }
+
+    /* CONHEÇA A BIA + ATENDIMENTO */
+    .bia {
+      position: relative;
+      padding: 6rem 0 0
+    }
+
+    .bia-grid {
+      position: static
+    }
+
+    .bia-txt {
+      position: relative;
+      z-index: 2;
+      max-width: 56vw;
+      padding-bottom: 2.5rem
+    }
+
+    .bia-txt p {
+      font-size: 1.1rem;
+      line-height: 2;
+      max-width: 46rem;
+      margin: 1.2rem 0
+    }
+
+    .seta {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 2rem 0 3rem
+    }
+
+    .seta-ico {
+      width: 2rem;
+      height: auto;
+      flex: none
+    }
+
+    .btn .seta-ico {
+      width: auto;
+      height: 1.3rem
+    }
+
+    .bia-foto {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 32.5vw;
+      z-index: 2
+    }
+
+    .bia-foto img {
+      width: 100%;
+      height: auto
+    }
+
+    /* PRÓTESE */
+    .protese {
+      border-top: 1rem solid var(--ouro);
+      padding: 3rem 0 4rem
+    }
+
+    .pr-grid {
+      display: grid;
+      grid-template-columns: 42vw 1fr;
+      gap: 3rem;
+      margin-top: 2rem
+    }
+
+    .antes-depois {
+      display: block;
+      width: 100%;
+      height: auto
+    }
+
+    .pr-faixa {
+      background: var(--ouro);
+      height: 1.05rem;
+      margin-top: -4.53%
+    }
+
+    .pr-fecho {
+      color: var(--ouro);
+      margin-top: 1rem
+    }
+
+    .pr-txt h3 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      margin: 3rem 0 1rem
+    }
+
+    .pr-txt h3:first-child {
+      margin-top: 2rem
+    }
+
+    .pr-txt p {
+      line-height: 1.95
+    }
+
+    /* GALERIA */
+    .galeria {
+      background: var(--grad-ouro);
+      padding: 3rem 0 4rem;
+      color: var(--preto)
+    }
+
+    .galeria h2 {
+      color: var(--creme)
+    }
+
+    .galeria .sub {
+      color: var(--creme-90)
+    }
+
+    .gal-topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+      flex-wrap: wrap
+    }
+
+    .gal-topo small {
+      font-size: .95rem;
+      color: #fff
+    }
+
+    .gal {
+      --grow: 1.9;
+      --w-ativo: calc(88vw * var(--grow) / (4 + var(--grow)));
+      display: flex;
+      height: 30vw;
+      margin-top: 2rem;
+      background: var(--preto)
+    }
+
+    .gal button {
+      position: relative;
+      flex: 1 1 0;
+      min-width: 0;
+      overflow: hidden;
+      border: 0;
+      padding: 0;
+      background: none;
+      cursor: pointer
+    }
+
+    .gal button.on {
+      flex-grow: var(--grow)
+    }
+
+    .gal img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: var(--w-ativo);
+      max-width: none;
+      height: 100%;
+      margin-left: calc(var(--w-ativo) / -2);
+      object-fit: cover
+    }
+
+    /* LOCALIZAÇÃO */
+    .local {
+      padding: 3.5rem 0 5rem
+    }
+
+    .divisor {
+      display: block;
+      width: 43vw;
+      max-width: 100%;
+      margin: 0 auto 4rem
+    }
+
+    .loc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start
+    }
+
+    .loc-txt .sub {
+      letter-spacing: .06em;
+      margin-top: 1rem;
+      line-height: 1.9
+    }
+
+    .loc-txt h3 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      letter-spacing: .03em
+    }
+
+    .endereco {
+      color: var(--ouro);
+      letter-spacing: .04em;
+      margin: .6rem 0 1rem
+    }
+
+    .mapa {
+      background: #d9d9d9;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 16/10
+    }
+
+    .mapa iframe {
+      width: 100%;
+      height: 100%;
+      border: 0
+    }
+
+    .ver-mapa {
+      display: inline-flex;
+      align-items: center;
+      gap: .9rem;
+      margin-top: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .04em
+    }
+
+    /* CTA + FOOTER */
+    .cta {
+      text-align: center;
+      padding: 6rem 0
+    }
+
+    .cta h2 {
+      color: var(--ouro);
+      font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+      letter-spacing: .03em
+    }
+
+    .cta h3 {
+      font-weight: 500;
+      font-size: clamp(1.8rem, 3.8vw, 3rem);
+      letter-spacing: .03em;
+      margin: .3rem 0 3rem
+    }
+
+    .cta p {
+      margin-bottom: 2rem
+    }
+
+    footer {
+      padding: 1.6rem 0 1.2rem;
+      font-size: .95rem
+    }
+
+    .ft {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid var(--ouro-2)
+    }
+
+    .ft strong {
+      font-weight: 400;
+      font-size: 1.15rem;
+      display: block;
+      margin-bottom: 1.5rem;
+      color: var(--creme)
+    }
+
+    .ft nav {
+      display: grid;
+      gap: .1rem;
+      text-transform: uppercase;
+      color: var(--creme-60)
+    }
+
+    .ft nav a:hover {
+      color: var(--ouro)
+    }
+
+    .copy {
+      text-align: center;
+      padding-top: 1rem
+    }
+
+    /* RESPONSIVO (base 1920; 2160/4K escalam pelo font-size em vw) */
+    @media(max-width:1180px) {
+      .bia-txt {
+        max-width: 58vw
+      }
+
+      .bia-txt p {
+        font-size: 1.05rem
+      }
+
+      .pr-grid {
+        grid-template-columns: 44vw 1fr;
+        gap: 2rem
+      }
+    }
+
+    @media(max-width:1024px) {
+      .hero-forma {
+        width: 42%
+      }
+
+      .serv-grid,
+      .loc-grid {
+        gap: 2rem
+      }
+
+      .gal {
+        height: 34vw
+      }
+    }
+
+    @media(max-width:860px) {
+      html {
+        font-size: 15px
+      }
+
+      .hero .wrap,
+      .servicos .wrap {
+        width: 88vw
+      }
+
+      .hero {
+        min-height: 100vh;
+        min-height: 100svh;
+        align-items: center;
+        background-size: auto 112%, cover
+      }
+
+      .hero-txt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding-block: 3rem
+      }
+
+      .hero-forma {
+        display: none !important
+      }
+
+      .hero h1 {
+        font-size: 2.3rem;
+        letter-spacing: .04em
+      }
+
+      .hero h1::after {
+        content: "";
+        display: block;
+        width: 4rem;
+        height: 2px;
+        background: var(--ouro);
+        margin: 1.1rem auto 0
+      }
+
+      .hero h2 {
+        font-size: 1.9rem;
+        margin: 0
+      }
+
+      .hero p {
+        margin: 0;
+        font-size: .85rem;
+        letter-spacing: .14em;
+        text-transform: uppercase
+      }
+
+      .hero .btn {
+        margin-top: 1rem
+      }
+
+      .serv-grid,
+      .pr-grid,
+      .loc-grid {
+        grid-template-columns: minmax(0, 1fr)
+      }
+
+      .serv-grid {
+        gap: 3.5rem
+      }
+
+      .serv-lista {
+        gap: 2.5rem;
+        grid-template-columns: minmax(0, 1fr)
+      }
+
+      .serv-lista,
+      .foco {
+        min-width: 0
+      }
+
+      .servicos {
+        padding-bottom: calc(3rem + 14vw)
+      }
+
+      .folha {
+        width: 70vw;
+        bottom: -16.2vw
+      }
+
+      .topo-titulo::after {
+        display: none
+      }
+
+      .bia {
+        padding-top: calc(16.2vw + 2rem)
+      }
+
+      .bia-txt {
+        max-width: none
+      }
+
+      .bia-foto {
+        position: static;
+        width: 80%;
+        max-width: 22rem;
+        margin: 0 auto
+      }
+
+      .protese {
+        padding: 2.5rem 0 3rem
+      }
+
+      .pr-txt h3:first-child {
+        margin-top: 1.5rem
+      }
+
+      .gal {
+        --grow: 3;
+        height: 78vw
+      }
+
+      .divisor {
+        width: 80vw
+      }
+
+      .mapa {
+        aspect-ratio: 4/3
+      }
+
+      .local {
+        padding: 3rem 0 4rem
+      }
+
+      .cta {
+        padding: 4.5rem 0
+      }
+    }
+
+    @media(max-width:640px) {
+      html {
+        font-size: 14px
+      }
+
+      h2 {
+        font-size: 1.9rem
+      }
+
+      .hero h1 {
+        font-size: 1.9rem
+      }
+
+      .hero h2 {
+        font-size: 1.6rem
+      }
+
+      .serv h3,
+      .foco h3 {
+        font-size: 1.5rem
+      }
+
+      .btn {
+        padding: .8rem 1.6rem;
+        font-size: 1.05rem;
+        width: 100%;
+        max-width: 22rem
+      }
+
+      .btn img {
+        width: 1.6rem;
+        height: 1.6rem
+      }
+
+      .pr-txt h3 {
+        font-size: 1.35rem
+      }
+
+      .loc-txt h3 {
+        font-size: 1.7rem
+      }
+
+      .gal-topo {
+        display: block
+      }
+
+      .gal-topo small {
+        display: block;
+        margin-top: .8rem
+      }
+
+      .ft {
+        flex-direction: column
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      * {
+        transition: none !important;
+        scroll-behavior: auto !important
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Troque o número: 55 + DDD + número -->
+  <!-- WhatsApp: https://wa.me/5511999999999 -->
+
+  <!-- HERO -->
+  <header class="hero" id="inicio">
+    <img class="hero-forma" src="assets/hero-forma.svg" alt="">
+    <div class="wrap hero-txt">
+      <h1>BIA SANTANDER 23</h1>
+      <h2>Seu visual,<br>cuidado nos detalhes.</h2>
+      <p>Corte · Barba · Prótese Capilar</p>
+      <a class="btn btn-ouro" href="https://wa.me/5511999999999" target="_blank" rel="noopener">Agendar horário
+        <img src="assets/whatsapp.svg" alt="">
+      </a>
+    </div>
+  </header>
+
+  <!-- SERVIÇOS -->
+  <section class="servicos" id="servicos">
+    <img class="folha" src="assets/curva-servicos-bia.svg" alt="">
+    <div class="wrap">
+      <div class="topo-titulo">
+        <h2>Serviços</h2>
+      </div>
+      <p class="sub">Cuidado, precisão e experiência em cada detalhe.</p>
+      <div class="serv-grid">
+        <div class="serv-lista">
+          <article class="serv">
+            <img class="icone" src="assets/icone-corte.svg" alt="">
+            <h3>Corte masculino</h3>
+            <p>Cortes, degradê, tesoura e acabamento.</p>
+            <div class="linha"><i></i></div>
+          </article>
+          <article class="serv">
+            <img class="icone" src="assets/icone-barba.svg" alt="">
+            <h3>Barba</h3>
+            <p>Cuidado, precisão e acabamento.</p>
+            <div class="linha"><i></i></div>
+          </article>
+        </div>
+        <div class="foco">
+          <img class="icone" src="assets/icone-protese.svg" alt="">
+          <h3>FOCO EM <span class="ouro">PRÓTESE CAPILAR</span></h3>
+          <p class="sub">Colocação e manutenção de próteses</p>
+          <div class="linha-c"></div>
+          <a class="btn btn-claro" href="#protese">Ver especialidade <img class="seta-ico" data-seta="y"
+              src="assets/seta-ver-especialidade.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONHEÇA A BIA / ATENDIMENTO -->
+  <section class="bia" id="bia">
+    <div class="wrap bia-grid">
+      <div class="bia-txt">
+        <h2>Conheça a Bia</h2>
+        <p>Bia Santander é <span class="ouro">especialista em prótese capilar</span>, colocação e manutenção de próteses
+          e técnica de nano fio em Santo André, na Vila Curuçá. Com experiência em cabelo masculino, oferece <span
+            class="ouro">atendimento personalizado</span> e cuidadoso para homens que desejam recuperar a aparência dos
+          cabelos, <span class="ouro">autoestima e confiança</span>. Também é <span class="ouro">especialista em cortes
+            masculinos, tesoura, degradê, acabamento e procedimentos capilares.</span></p>
+        <img class="seta" data-seta="x" src="assets/seta-conheca-a-bia.svg" alt="">
+        <h2>Atendimento</h2>
+        <p>O atendimento é realizado com horário marcado, na <span class="ouro">Barbearia 23, na Av. Itamarati, em Santo
+            André,</span> atendendo clientes de Santo André e região do ABC Paulista.<br><a class="ouro"
+            href="https://wa.me/5511999999999" target="_blank" rel="noopener">Agende sua avaliação pelo WhatsApp.</a>
+        </p>
+      </div>
+      <div class="bia-foto"><img src="assets/bia.svg" alt="Bia Santander"></div>
+    </div>
+  </section>
+
+  <!-- PRÓTESE CAPILAR -->
+  <section class="protese" id="protese">
+    <div class="wrap">
+      <h2>Prótese Capilar</h2>
+      <p>Meu trabalho com prótese capilar vai muito além da colocação.</p>
+      <div class="pr-grid">
+        <div>
+          <img class="antes-depois" src="assets/antes-depois.svg" alt="Antes e depois de prótese capilar">
+          <div class="pr-faixa"></div>
+          <p class="pr-fecho">Mais do que só colocar uma prótese, quero te devolver sua auto segurança, autoestima e a
+            liberdade de se olhar no espelho e se sentir feliz com sua aparência! Eu gosto de pensar que cada cliente é
+            único.</p>
+        </div>
+        <div class="pr-txt">
+          <h3>Escolha e colocação</h3>
+          <p>Eu <span class="ouro">busco te entender</span>, o estilo de corte que você mais gosta e qual <span
+              class="ouro">resultado você espera.</span> A partir disso, escolhemos a prótese mais adequada e fazemos a
+            colocação de forma <span class="ouro">personalizada, buscando respeitar a linha frontal</span>, densidade e
+            o caimento natural dos fios.</p>
+          <h3>Manutenção</h3>
+          <p>Durante esse processo, fazemos a higienização da prótese e do couro cabeludo, <span class="ouro">cuidamos
+              da saúde da pele, realizamos a hidratação dos fios</span> e fazemos a recolocação, sempre buscando <span
+              class="ouro">preservar a qualidade da prótese e o conforto!</span><br>Te oriento sobre os <span
+              class="ouro">cuidados em casa</span>, porque acredito que é um <span class="ouro">cuidado em
+              conjunto</span>, tanto meu na barbearia quanto a forma que a prótese é tratada no dia a dia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="galeria" id="galeria">
+    <div class="wrap">
+      <div class="gal-topo">
+        <div>
+          <h2>Galeria</h2>
+          <p class="sub">Cada detalhe faz parte do resultado.</p>
+        </div>
+        <small>Clique em uma imagem para destacá-la</small>
+      </div>
+      <div class="gal" id="gal">
+        <button type="button" aria-label="Destacar imagem 1"><img class="ph" src="assets/img/galeria-1.jpg"
+            style="object-position:center 25%" alt="Corte com cabelo cacheado e degradê" loading="lazy"></button>
+        <button type="button" class="on" aria-label="Destacar imagem 2"><img class="ph" src="assets/img/galeria-2.jpg"
+            style="object-position:center 42%" alt="Corte degradê com cabelo e barba na cor vermelha"
+            loading="lazy"></button>
+        <button type="button" aria-label="Destacar imagem 3"><img class="ph" src="assets/img/galeria-3.jpg"
+            style="object-position:center 42%" alt="Corte com desenho na lateral" loading="lazy"></button>
+        <button type="button" aria-label="Destacar imagem 4"><img class="ph" src="assets/img/galeria-4.jpg"
+            style="object-position:center 35%" alt="Corte masculino com franja e barba desenhada"
+            loading="lazy"></button>
+        <button type="button" aria-label="Destacar imagem 5"><img class="ph" src="assets/img/galeria-5.jpg"
+            style="object-position:center 45%" alt="Barba alinhada" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section class="local" id="localizacao">
+    <div class="wrap">
+      <img class="divisor" src="assets/divisor-localizacao.svg" alt="">
+      <div class="loc-grid">
+        <div class="loc-txt">
+          <h2>Localização</h2>
+          <p class="sub">Onde nos encontrar<br>Santo André · ABC Paulista</p>
+          <h3>Na Barbearia 23</h3>
+          <p class="endereco">Barbearia 23 Av. Itamarati, 1308 Santo André — SP</p>
+          <p>Atendimento com horário marcado.<br>Clientes de Santo André e região.</p>
+        </div>
+        <div>
+          <!-- Mapa real do Google Maps. Para usar o código oficial: Maps > Compartilhar > Incorporar um mapa > copie o src -->
+          <div class="mapa" id="mapa"><iframe
+              src="https://www.google.com/maps?q=Av.+Itamarati,+1308,+Santo+Andr%C3%A9,+SP&output=embed" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Mapa da Barbearia 23"></iframe></div>
+          <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Av.+Itamarati+1308+Santo+André+SP"
+            target="_blank" rel="noopener">Ver no Google Maps <img class="seta-ico" data-seta="x"
+              src="assets/seta-ver-no-google-maps.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta" id="agendar">
+    <div class="wrap">
+      <h2>AGENDE SEU HORÁRIO</h2>
+      <h3>Seu próximo <span class="ouro">visual</span> começa aqui.</h3>
+      <p>Corte, barba e prótese capilar com <span class="ouro">atendimento personalizado</span> e horário marcado.</p>
+      <a class="btn btn-claro" href="https://wa.me/5511999999999" target="_blank" rel="noopener">Chamar no WhatsApp
+        <img src="assets/whatsapp.svg" alt="">
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="ft">
+        <div><strong>BIA SANTANDER 23</strong>Atendimento personalizado em Santo André e região do ABC.</div>
+        <nav aria-label="Rodapé">
+          <a href="#servicos">Cortes</a>
+          <a href="#servicos">Barba</a>
+          <a href="#protese">Prótese capilar</a>
+          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">WhatsApp →</a>
+        </nav>
+      </div>
+      <p class="copy">© 2026 Bia Santander 23</p>
+    </div>
+  </footer>
+
+  <script>
+    // Galeria: a imagem clicada ganha destaque; o flex troca com animação suave (GSAP)
+    (() => {
+      const gal = document.getElementById('gal'), botoes = gal.querySelectorAll('button');
+      const destacar = alvo => {
+        const g = parseFloat(getComputedStyle(gal).getPropertyValue('--grow')) || 1.9;
+        botoes.forEach(b => {
+          const ativo = b === alvo;
+          b.classList.toggle('on', ativo);
+          if (window.gsap) gsap.to(b, { flexGrow: ativo ? g : 1, duration: 1.1, ease: 'power3.inOut', overwrite: 'auto' });
+        });
+      };
+      botoes.forEach(b => b.addEventListener('click', () => destacar(b)));
+      addEventListener('resize', () => botoes.forEach(b => b.style.flexGrow = ''));
+    })();
+  </script>
+  <!-- GSAP: tenta o arquivo local (assets/js/gsap.min.js) e, se não existir, usa o CDN -->
+  <script src="assets/js/gsap.min.js"></script>
+  <script>window.gsap || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"><\/script>')</script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (!window.gsap) { console.warn('GSAP não carregou. Coloque gsap.min.js em assets/js/'); return; }
+
+      // Se true, quem desativou animações no sistema não vê nada animado.
+      const RESPEITAR_REDUCAO_DE_MOVIMENTO = false;
+      if (RESPEITAR_REDUCAO_DE_MOVIMENTO && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      const D = { ease: 'power3.out' };
+      const subir = (extra = {}) => ({ y: 0, autoAlpha: 1, duration: .7, ...extra });
+
+      // ---------- HERO (ao carregar) ----------
+      gsap.timeline({ defaults: D })
+        .fromTo('.hero-forma', { xPercent: 100 }, { xPercent: 0, duration: 1.1, ease: 'power4.out' })
+        .fromTo('.hero h1', { y: 40, autoAlpha: 0 }, subir({ duration: .8 }), '-=.7')
+        .fromTo('.hero h2', { y: 40, autoAlpha: 0 }, subir({ duration: .8 }), '-=.55')
+        .fromTo('.hero p', { y: 30, autoAlpha: 0 }, subir(), '-=.5')
+        .fromTo('.hero .btn', { y: 30, autoAlpha: 0, scale: .9 }, { y: 0, autoAlpha: 1, scale: 1, duration: .8, ease: 'back.out(1.8)' }, '-=.45');
+
+      // ---------- demais seções: tocam quando entram na tela ----------
+      const quando = (sel, montar) => {
+        const el = document.querySelector(sel);
+        const tl = montar(gsap.timeline({ paused: true, defaults: D }));
+        new IntersectionObserver((e, o) => { if (e[0].isIntersecting) { tl.play(); o.disconnect(); } }, { threshold: .15 }).observe(el);
+      };
+
+      quando('.servicos', t => t
+        .fromTo('.servicos h2, .servicos .sub', { y: 30, autoAlpha: 0 }, subir({ stagger: .12 }))
+        .fromTo('.serv', { x: -50, autoAlpha: 0 }, { x: 0, autoAlpha: 1, stagger: .2, duration: .8 }, '-=.3')
+        .fromTo('.serv .linha', { scaleX: 0, transformOrigin: 'left center' }, { scaleX: 1, stagger: .2, duration: .9 }, '<.3')
+        .fromTo('.foco > *', { y: 30, autoAlpha: 0 }, subir({ stagger: .1 }), '-=1')
+        .fromTo('.folha', { xPercent: 40, autoAlpha: 0 }, { xPercent: 0, autoAlpha: 1, duration: 1.2, ease: 'power4.out' }, '-=.9')
+        .call(() => gsap.to('.foco .icone', { y: -8, duration: 1.6, repeat: -1, yoyo: true, ease: 'sine.inOut' })));
+
+      quando('.bia', t => t
+        .fromTo('.bia-txt > :not(.seta)', { y: 30, autoAlpha: 0 }, subir({ stagger: .15 }))
+        .fromTo('.seta', { scaleX: 0, transformOrigin: 'left center' }, { scaleX: 1, duration: 1, ease: 'power2.inOut' }, '<.5')
+        .fromTo('.bia-foto', { y: 80, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 1.1 }, 0));
+
+      quando('.protese', t => t
+        .fromTo('.protese h2, .protese h2 + p', { y: 30, autoAlpha: 0 }, subir({ stagger: .12 }))
+        .fromTo('.antes-depois', { x: -60, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: .9 }, '-=.3')
+        .fromTo('.pr-faixa', { scaleX: 0, transformOrigin: 'left center' }, { scaleX: 1, duration: .7 }, '-=.4')
+        .fromTo('.pr-fecho', { y: 20, autoAlpha: 0 }, subir({ duration: .6 }), '-=.2')
+        .fromTo('.pr-txt > *', { y: 30, autoAlpha: 0 }, subir({ stagger: .15 }), '-=1.2'));
+
+      quando('.galeria', t => t
+        .fromTo('.gal-topo > *', { y: 30, autoAlpha: 0 }, subir({ stagger: .12 }))
+        .fromTo('.gal button', { y: 60, autoAlpha: 0 }, subir({ stagger: .1, duration: .8 }), '-=.3'));
+
+      quando('.local', t => t
+        .fromTo('.divisor', { scaleX: 0, autoAlpha: 0 }, { scaleX: 1, autoAlpha: 1, duration: .9 })
+        .fromTo('.loc-txt > *', { y: 30, autoAlpha: 0 }, subir({ stagger: .12 }), '-=.4')
+        .fromTo('.mapa', { y: 40, autoAlpha: 0 }, subir({ duration: .8 }), '-=.7')
+        .fromTo('.ver-mapa', { autoAlpha: 0 }, { autoAlpha: 1, duration: .5 }, '-=.2'));
+
+      quando('.cta', t => t
+        .fromTo('.cta h2, .cta h3, .cta p, .cta .btn', { y: 30, autoAlpha: 0 }, subir({ stagger: .15 })));
+
+      // ---------- HOVER / CLIQUE ----------
+      // setas: no hover andam, no clique disparam e voltam com elástico
+      document.querySelectorAll('[data-seta]').forEach(seta => {
+        const eixo = seta.dataset.seta, grande = seta.classList.contains('seta');
+        const dist = grande ? 28 : 10, alvo = seta.closest('a, button') || seta;
+        alvo.addEventListener('mouseenter', () => gsap.to(seta, { [eixo]: dist, duration: .45, ease: 'power3.out', overwrite: 'auto' }));
+        alvo.addEventListener('mouseleave', () => gsap.to(seta, { [eixo]: 0, duration: .45, ease: 'power3.out', overwrite: 'auto' }));
+        alvo.addEventListener('click', () => gsap.timeline({ overwrite: 'auto' })
+          .to(seta, { [eixo]: dist * 2.5, duration: .25, ease: 'power2.in' })
+          .to(seta, { [eixo]: 0, duration: .9, ease: 'elastic.out(1, .45)' }));
+      });
+
+      // itens de serviço: a linha estica, a bolinha cresce e o ícone inclina
+      document.querySelectorAll('.serv').forEach(item => {
+        const linha = item.querySelector('.linha'), ponto = linha.querySelector('i'), icone = item.querySelector('.icone'), titulo = item.querySelector('h3');
+        let base = linha.offsetWidth;
+        addEventListener('resize', () => { gsap.set(linha, { clearProps: 'width' }); base = linha.offsetWidth; });
+        item.addEventListener('mouseenter', () => {
+          gsap.to(linha, { width: Math.min(item.clientWidth, base * 1.35), duration: .7, ease: 'power3.out', overwrite: 'auto' });
+          gsap.to(ponto, { scale: 2, duration: .5, ease: 'back.out(3)' });
+          gsap.to(icone, { scale: 1.12, rotation: -8, duration: .5, ease: 'back.out(2)' });
+          gsap.to(titulo, { x: 10, duration: .4 });
+        });
+        item.addEventListener('mouseleave', () => {
+          gsap.to(linha, { width: base, duration: .7, ease: 'power3.inOut', overwrite: 'auto' });
+          gsap.to(ponto, { scale: 1, duration: .4 });
+          gsap.to(icone, { scale: 1, rotation: 0, duration: .5, ease: 'power3.out' });
+          gsap.to(titulo, { x: 0, duration: .4 });
+        });
+      });
+
+      // botões
+      document.querySelectorAll('.btn').forEach(b => {
+        b.addEventListener('mouseenter', () => gsap.to(b, { y: -4, scale: 1.04, duration: .3, ease: 'power2.out' }));
+        b.addEventListener('mouseleave', () => gsap.to(b, { y: 0, scale: 1, duration: .4, ease: 'power2.out' }));
+        b.addEventListener('mousedown', () => gsap.to(b, { scale: .97, duration: .1 }));
+      });
+
+      // galeria e links do rodapé
+      document.querySelectorAll('.gal button').forEach(b => {
+        const img = b.querySelector('img');
+        b.addEventListener('mouseenter', () => gsap.to(img, { scale: 1.07, duration: .6, ease: 'power2.out' }));
+        b.addEventListener('mouseleave', () => gsap.to(img, { scale: 1, duration: .6, ease: 'power2.out' }));
+      });
+      document.querySelectorAll('.ft nav a').forEach(a => {
+        a.addEventListener('mouseenter', () => gsap.to(a, { x: 8, duration: .3 }));
+        a.addEventListener('mouseleave', () => gsap.to(a, { x: 0, duration: .3 }));
+      });
+    });
+  </script>
+</body>
+
+</html>
